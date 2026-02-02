@@ -7,15 +7,24 @@ public class Shake : MonoBehaviour
     public bool start = false;
     public AnimationCurve curve;
 
+    public GameObject cam;
+    private PlayerScript camScript;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+         camScript = cam.GetComponent<PlayerScript>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (camScript.do_I_Start == true)
+        {
+            start = true;
+        }
+
         if (start)
         {
             start = false;
@@ -39,4 +48,6 @@ public class Shake : MonoBehaviour
 
         transform.position = startPosition;
     }
+
+   
 }

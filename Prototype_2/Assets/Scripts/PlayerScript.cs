@@ -1,10 +1,15 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public bool do_I_Start = false;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+      
+
 
     }
 
@@ -18,12 +23,15 @@ public class PlayerScript : MonoBehaviour
 void OnTriggerEnter2D(Collider2D other)
     {
 
+
+
         if (other.gameObject.CompareTag("BadItem"))
         {
-
-
+            do_I_Start = true;
             other.gameObject.SetActive(false);
-          
+             
+
+
 
 
         }
@@ -31,7 +39,7 @@ void OnTriggerEnter2D(Collider2D other)
         {
 
             other.gameObject.SetActive(false);
-            
+
 
         }
         

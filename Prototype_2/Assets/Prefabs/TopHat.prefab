@@ -192,9 +192,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1288430431418745507}
   - component: {fileID: 793912467749881945}
+  - component: {fileID: 5195890384211961264}
   m_Layer: 0
   m_Name: TopHat
-  m_TagString: Untagged
+  m_TagString: GoodItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,15 +208,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6912559704381206520}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4163, y: 4.05591, z: 0}
+  m_LocalRotation: {x: -0.042029556, y: 0.013448587, z: -0.00056578673, w: 0.9990257}
+  m_LocalPosition: {x: -3.4164395, y: 4.053741, z: -0.04128389}
   m_LocalScale: {x: 0.4267, y: 0.4267, z: 0.4267}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7602980875076179259}
   - {fileID: 2405616367719205289}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -175.184, y: 181.548, z: -180.13}
 --- !u!50 &793912467749881945
 Rigidbody2D:
   serializedVersion: 5
@@ -243,3 +244,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!68 &5195890384211961264
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912559704381206520}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.269456, y: -1.577388}
+  - {x: -2.080952, y: -1.7509838}
+  - {x: -1.8081485, y: -1.9363247}
+  - {x: -0.89340377, y: -2.0795946}
+  - {x: -0.32801887, y: -1.9951296}
+  - {x: 0.1216813, y: -1.8799634}
+  - {x: 0.32442287, y: -1.7121154}
+  - {x: 0.47989282, y: -1.5129042}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

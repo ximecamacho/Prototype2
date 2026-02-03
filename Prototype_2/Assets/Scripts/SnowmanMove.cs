@@ -45,5 +45,6 @@ public class SnowmanMove : MonoBehaviour
         }
 
         rb.linearVelocity = new Vector2(vx, rb.linearVelocity.y);
+        
     }
 }

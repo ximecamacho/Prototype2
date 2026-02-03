@@ -3,11 +3,11 @@ using UnityEngine;
 public class SnowmanMove : MonoBehaviour
 {
     [Header("Speed")]
-    public float maxSpeed = 20f;
+    public float maxSpeed = 8f;
 
     [Header("Ice Feel (lower decel = more slippery)")]
     public float accel = 40f;        // how fast you speed up when holding input
-    public float iceDecel = 1f;      // how fast you slow down when releasing input
+    public float iceDecel = 5f;      // how fast you slow down when releasing input
     private Rigidbody2D rb;
 
     // Optional if you later want "not ice" without using physics materials:

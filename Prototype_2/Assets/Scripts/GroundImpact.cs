@@ -15,7 +15,10 @@ public class GroundImpact : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-
+        if (other.gameObject.CompareTag("BadItem"))
+        {
+            other.gameObject.SetActive(false);
+        }
         
         
         Vector2 newPos = other.contacts[0].point;

@@ -15,6 +15,7 @@ public class GroundImpact : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
+        
         Vector2 newPos = other.contacts[0].point;
         particlesTransform.position = new Vector3(newPos.x, newPos.y, particlesTransform.position.z);
         particles.Play();

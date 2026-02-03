@@ -6,7 +6,7 @@ public class SnowmanMove : MonoBehaviour
     public float maxSpeed = 8f;
 
     [Header("Ice Feel (lower decel = more slippery)")]
-    public float accel = 40f;        // how fast you speed up when holding input
+    public float accel = 20f;        // how fast you speed up when holding input
     public float iceDecel = 5f;      // how fast you slow down when releasing input
     private Rigidbody2D rb;
 

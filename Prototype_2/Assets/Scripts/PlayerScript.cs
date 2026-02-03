@@ -103,7 +103,7 @@ public class PlayerScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("BadItem"))
         {
-            //loseImage.SetActive(true);
+            
             this.gameObject.SetActive(false);
             other.gameObject.SetActive(false);
             head.SetActive(false);

@@ -6,7 +6,7 @@ public class ProjectileSpawnerScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Transform[] spawnPoints;
     public GameObject [] projectilePrefabs;
-    private float spawnInterval = 1.5f;
+    private float spawnInterval = 1.0f;
     void Start()
     {
         StartCoroutine(spawnProj(spawnInterval));

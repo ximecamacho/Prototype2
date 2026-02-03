@@ -6,6 +6,11 @@ TagManager:
   tags:
   - GoodItem
   - BadItem
+  - Button
+  - Arms
+  - Scarfs
+  - Nose
+  - Hat
   layers:
   - Default
   - TransparentFX

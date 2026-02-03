@@ -484,7 +484,11 @@ MonoBehaviour:
   - {fileID: 1751307132}
   projectilePrefabs:
   - {fileID: 7918184025100495850, guid: d54202026954841c38666de950d03f6a, type: 3}
-  - {fileID: 5586585199929221526, guid: 547d8b2046d8445f28bde11caa755f83, type: 3}
+  - {fileID: 8272227289692276617, guid: bbbff0bde1131456fb6811a5240e70ff, type: 3}
+  - {fileID: 6661491680663204316, guid: 495b70baa7df54b21bbc46c3101c32d1, type: 3}
+  - {fileID: 7433326931847432035, guid: 7dc01412555dc4d218754b6b6c161171, type: 3}
+  - {fileID: 6912559704381206520, guid: b0042791acc8d4cb1a2c497c1663e87f, type: 3}
+  - {fileID: 6734399011007427471, guid: 547d8b2046d8445f28bde11caa755f83, type: 3}
 --- !u!4 &483394860
 Transform:
   m_ObjectHideFlags: 0
@@ -668,7 +672,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9880daa2e853745dbaa56dd0c4f406f6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::Shake
   duration: 1
   start: 0
   curve:
@@ -676,30 +680,30 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: -0.002380371
+      inSlope: 2.6416194
+      outSlope: 2.6416194
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.10996119
     - serializedVersion: 3
-      time: 0.34204307
-      value: 0.19824007
-      inSlope: -0.00057766296
-      outSlope: -0.00057766296
+      time: 0.09949244
+      value: 0.24049154
+      inSlope: -1.0448859
+      outSlope: -1.0448859
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.073718585
     - serializedVersion: 3
-      time: 0.9963989
-      value: 0.0032196045
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      time: 0.99609375
+      value: -0.009525299
+      inSlope: -0.2788495
+      outSlope: -0.2788495
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -983,6 +987,7 @@ GameObject:
   - component: {fileID: 670930620}
   - component: {fileID: 670930621}
   - component: {fileID: 670930622}
+  - component: {fileID: 670930623}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1100,6 +1105,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &670930623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670930619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185ecafa4e97e4fb68df508c3b58b3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
+  do_I_Start: 0
 --- !u!1 &695892611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1290,7 @@ GameObject:
   - component: {fileID: 1155879325}
   - component: {fileID: 1155879327}
   - component: {fileID: 1155879326}
+  - component: {fileID: 1155879328}
   m_Layer: 0
   m_Name: Snowman
   m_TagString: Player
@@ -1411,6 +1430,19 @@ MonoBehaviour:
   iceDecel: 1
   useIce: 1
   groundDecel: 20
+--- !u!114 &1155879328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155879316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185ecafa4e97e4fb68df508c3b58b3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
+  do_I_Start: 0
 --- !u!1 &1299746369
 GameObject:
   m_ObjectHideFlags: 0
@@ -6560,11 +6592,11 @@ MonoBehaviour:
   - {fileID: 2566048}
   projectilePrefabs:
   - {fileID: 7918184025100495850, guid: d54202026954841c38666de950d03f6a, type: 3}
-  - {fileID: 2840329192179774086, guid: bbbff0bde1131456fb6811a5240e70ff, type: 3}
-  - {fileID: 5586585199929221526, guid: 547d8b2046d8445f28bde11caa755f83, type: 3}
   - {fileID: 6661491680663204316, guid: 495b70baa7df54b21bbc46c3101c32d1, type: 3}
   - {fileID: 7433326931847432035, guid: 7dc01412555dc4d218754b6b6c161171, type: 3}
   - {fileID: 6912559704381206520, guid: b0042791acc8d4cb1a2c497c1663e87f, type: 3}
+  - {fileID: 8272227289692276617, guid: bbbff0bde1131456fb6811a5240e70ff, type: 3}
+  - {fileID: 6734399011007427471, guid: 547d8b2046d8445f28bde11caa755f83, type: 3}
 --- !u!4 &1974391135
 Transform:
   m_ObjectHideFlags: 0
@@ -6624,11 +6656,11 @@ MonoBehaviour:
   - {fileID: 404008170}
   projectilePrefabs:
   - {fileID: 7918184025100495850, guid: d54202026954841c38666de950d03f6a, type: 3}
-  - {fileID: 2840329192179774086, guid: bbbff0bde1131456fb6811a5240e70ff, type: 3}
-  - {fileID: 5586585199929221526, guid: 547d8b2046d8445f28bde11caa755f83, type: 3}
   - {fileID: 6661491680663204316, guid: 495b70baa7df54b21bbc46c3101c32d1, type: 3}
   - {fileID: 7433326931847432035, guid: 7dc01412555dc4d218754b6b6c161171, type: 3}
   - {fileID: 6912559704381206520, guid: b0042791acc8d4cb1a2c497c1663e87f, type: 3}
+  - {fileID: 8272227289692276617, guid: bbbff0bde1131456fb6811a5240e70ff, type: 3}
+  - {fileID: 6734399011007427471, guid: 547d8b2046d8445f28bde11caa755f83, type: 3}
 --- !u!4 &1988750908
 Transform:
   m_ObjectHideFlags: 0

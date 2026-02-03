@@ -22,6 +22,7 @@ public class Shake : MonoBehaviour
     {
         if (camScript.do_I_Start == true)
         {
+            camScript.do_I_Start = false;
             start = true;
         }
 

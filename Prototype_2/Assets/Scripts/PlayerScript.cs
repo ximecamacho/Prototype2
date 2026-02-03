@@ -27,12 +27,9 @@ void OnTriggerEnter2D(Collider2D other)
 
         if (other.gameObject.CompareTag("BadItem"))
         {
-            do_I_Start = true;
+           
             other.gameObject.SetActive(false);
-             
-
-
-
+    
 
         }
         else if (other.gameObject.CompareTag("GoodItem"))

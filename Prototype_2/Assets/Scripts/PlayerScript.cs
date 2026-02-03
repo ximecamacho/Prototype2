@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour
     public TextMeshProUGUI buttonText;
 
     public GameObject winTextObject;
+    public GameObject loseTextObject;
     
     public bool do_I_Start = false;
 
@@ -21,8 +22,8 @@ public class PlayerScript : MonoBehaviour
     public int armsCount = 2;
     public int buttonsCount = 2;
 
-   
-    
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,6 +35,7 @@ public class PlayerScript : MonoBehaviour
         buttonsCount = 2;
         SetScoreText();
         winTextObject.SetActive(false);
+        loseTextObject.SetActive(false);
 
 
     }
@@ -72,6 +74,7 @@ public class PlayerScript : MonoBehaviour
         if (other.gameObject.CompareTag("BadItem"))
         {
             do_I_Start = true;
+             loseTextObject.SetActive(true);
 
 
             other.gameObject.SetActive(false);

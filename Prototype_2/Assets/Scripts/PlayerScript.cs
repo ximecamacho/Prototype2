@@ -12,7 +12,18 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject winTextObject;
     public GameObject loseTextObject;
+
+    public GameObject hatObject;
+    public GameObject noseObject;
+    public GameObject scarfObject;
+
+    public GameObject arm1;
+    public GameObject arm2;
     
+      public GameObject button1;
+    public GameObject button2;
+    public GameObject button3;
+    public GameObject button4;
     public bool do_I_Start = false;
 
     public int hatCount = 1;
@@ -20,7 +31,7 @@ public class PlayerScript : MonoBehaviour
 
     public int scarfCount = 2;
     public int armsCount = 2;
-    public int buttonsCount = 2;
+    public int buttonsCount = 4;
 
 
 
@@ -32,10 +43,20 @@ public class PlayerScript : MonoBehaviour
         noseCount = 1;
         scarfCount = 2;
         armsCount = 2;
-        buttonsCount = 2;
+        buttonsCount = 4;
         SetScoreText();
         winTextObject.SetActive(false);
         loseTextObject.SetActive(false);
+        hatObject.SetActive(false);
+        noseObject.SetActive(false);
+        scarfObject.SetActive(false);
+        arm1.SetActive(false);
+        arm2.SetActive(false);
+        button1.SetActive(false);
+        button2.SetActive(false);
+        button3.SetActive(false);
+        button4.SetActive(false);
+
 
 
     }
@@ -73,23 +94,14 @@ public class PlayerScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("BadItem"))
         {
-            do_I_Start = true;
-            loseTextObject.SetActive(true);
             other.gameObject.SetActive(false);
             this.gameObject.SetActive(false);
+            do_I_Start = true;
+            loseTextObject.SetActive(true);
+            
+            
             //Time.timeScale = 0f;
 
-
-
-        }
-        else if (other.gameObject.CompareTag("Hat"))
-        {
-            if (hatCount > 0)
-            {
-                hatCount = hatCount - 1;
-            }
-            SetScoreText();
-            other.gameObject.SetActive(false);
 
 
         }
@@ -97,6 +109,12 @@ public class PlayerScript : MonoBehaviour
         {
             if (armsCount > 0)
             {
+                if( armsCount == 1){
+                    arm1.SetActive(true);
+                }
+                else{
+                    arm2.SetActive(true);
+                }
                 armsCount = armsCount - 1;
             }
             SetScoreText();
@@ -108,6 +126,7 @@ public class PlayerScript : MonoBehaviour
         {
             if (scarfCount > 0)
             {
+                scarfObject.SetActive(true);
                 scarfCount = scarfCount - 1;
             }
             SetScoreText();
@@ -119,6 +138,8 @@ public class PlayerScript : MonoBehaviour
         {
             if (hatCount > 0)
             {
+                 hatObject.SetActive(true);
+        
                 hatCount = hatCount - 1;
             }
             SetScoreText();
@@ -130,6 +151,8 @@ public class PlayerScript : MonoBehaviour
         {
             if (noseCount > 0)
             {
+                noseObject.SetActive(true);
+      
                 noseCount = noseCount - 1;
             }
             SetScoreText();
@@ -141,6 +164,25 @@ public class PlayerScript : MonoBehaviour
         {
             if (buttonsCount > 0)
             {
+                if(buttonsCount == 1){
+                    button1.SetActive(true);
+                }
+                else if (buttonsCount == 2){
+                    button2.SetActive(true);
+
+                }
+                else if( buttonsCount == 3){
+                    button3.SetActive(true);
+
+                }
+                else{
+                    button4.SetActive(true);
+
+                }
+                 
+                 
+           
+                
                 buttonsCount = buttonsCount - 1;
             }
             SetScoreText();

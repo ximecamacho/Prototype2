@@ -74,11 +74,10 @@ public class PlayerScript : MonoBehaviour
         if (other.gameObject.CompareTag("BadItem"))
         {
             do_I_Start = true;
-             loseTextObject.SetActive(true);
-
-
+            loseTextObject.SetActive(true);
             other.gameObject.SetActive(false);
-            Time.timeScale = 0f;
+            this.gameObject.SetActive(false);
+            //Time.timeScale = 0f;
 
 
 

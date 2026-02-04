@@ -14,6 +14,9 @@ public class SnowmanMove : MonoBehaviour
     public bool useIce = true;
     public float groundDecel = 20f;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip snowmanSlide;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +25,8 @@ public class SnowmanMove : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,10 +40,18 @@ public class SnowmanMove : MonoBehaviour
         {
             float targetVx = input * maxSpeed;
             vx = Mathf.MoveTowards(vx, targetVx, accel * Time.fixedDeltaTime);
+
+            //play audio when the snowman moves 
+            audioSource.clip = snowmanSlide;
+            //audioSource.Play();
         }
         // otherwise, decelerate slowly (ice glide)
         else
         {
+            //play audio when the snowman moves 
+            audioSource.clip = snowmanSlide;
+            //audioSource.Play();
+
             float decel = useIce ? iceDecel : groundDecel;
             vx = Mathf.MoveTowards(vx, 0f, decel * Time.fixedDeltaTime);
         }

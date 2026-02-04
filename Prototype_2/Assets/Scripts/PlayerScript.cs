@@ -40,7 +40,13 @@ public class PlayerScript : MonoBehaviour
     public int armsCount = 2;
     public int buttonsCount = 4;
 
+    //private AudioSource audioSource;
+    //[SerializeField] private AudioClip collectedItem;
 
+    //private void Awake()
+    //{
+    //    audioSource = GetComponent<AudioSource>();
+    //}
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -98,7 +104,7 @@ public class PlayerScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-
+        //audioSource.clip = collectedItem; 
 
 
         if (other.gameObject.CompareTag("BadItem"))
@@ -125,12 +131,18 @@ public class PlayerScript : MonoBehaviour
                 if (armsCount == 1)
                 {
                     arm1.SetActive(true);
+                   
                 }
                 else
                 {
                     arm2.SetActive(true);
+              
                 }
+
                 armsCount = armsCount - 1;
+
+                ////play audio
+                //audioSource.Play();
             }
             SetScoreText();
             other.gameObject.SetActive(false);
@@ -139,10 +151,14 @@ public class PlayerScript : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Scarfs"))
         {
+
             if (scarfCount > 0)
             {
                 scarfObject.SetActive(true);
                 scarfCount = scarfCount - 1;
+
+                ////play audio
+                //audioSource.Play();
             }
             SetScoreText();
             other.gameObject.SetActive(false);
@@ -151,11 +167,15 @@ public class PlayerScript : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Hat"))
         {
+
             if (hatCount > 0)
             {
                 hatObject.SetActive(true);
 
                 hatCount = hatCount - 1;
+
+                ////play audio
+                //audioSource.Play();
             }
             SetScoreText();
             other.gameObject.SetActive(false);
@@ -164,11 +184,15 @@ public class PlayerScript : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Nose"))
         {
+
             if (noseCount > 0)
             {
                 noseObject.SetActive(true);
 
                 noseCount = noseCount - 1;
+
+                ////play audio
+                //audioSource.Play();
             }
             SetScoreText();
             other.gameObject.SetActive(false);
@@ -182,6 +206,7 @@ public class PlayerScript : MonoBehaviour
                 if (buttonsCount == 1)
                 {
                     button1.SetActive(true);
+
                 }
                 else if (buttonsCount == 2)
                 {
@@ -200,7 +225,8 @@ public class PlayerScript : MonoBehaviour
                 }
 
 
-
+                ////play audio
+                //audioSource.Play();
 
                 buttonsCount = buttonsCount - 1;
             }

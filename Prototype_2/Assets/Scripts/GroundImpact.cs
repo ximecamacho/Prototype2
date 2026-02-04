@@ -7,17 +7,28 @@ public class GroundImpact : MonoBehaviour
 {
     private ParticleSystem particles;
     private Transform particlesTransform;
+
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip icicleImpact; 
+
     private void Awake()
     {
         particles = GetComponentInChildren<ParticleSystem>();
-        //name of the child Particle System is 'groundParticles'
+        //name of the child Particle System is 'impactParticles'
         particlesTransform = transform.Find("ImpactParticles");
+        audioSource = GetComponent<AudioSource>();
+
+    
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("BadItem"))
         {
             other.gameObject.SetActive(false);
+
+            //play audio when the icicle hits the ground 
+            audioSource.clip = icicleImpact;
+            audioSource.Play();
         }
         
         

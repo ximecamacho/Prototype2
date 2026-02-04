@@ -21,7 +21,11 @@ public class CollectionSound : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        hatCount = 1;
+        noseCount = 1;
+        scarfCount = 1;
+        armsCount = 2;
+        buttonsCount = 4;
     }
 
     // Update is called once per frame
@@ -32,42 +36,46 @@ public class CollectionSound : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        audioSource.clip = collectedItem; 
+        //audioSource.clip = collectedItem; 
 
         if (other.gameObject.CompareTag("Arms"))
         {
             if (armsCount > 0)
             {
-                armsCount = armsCount - 1;
                 //play audio
+                audioSource.clip = collectedItem;
                 audioSource.Play();
+                armsCount = armsCount - 1;
             }
         }
         else if (other.gameObject.CompareTag("Scarfs"))
         {
             if (scarfCount > 0)
             {
-                scarfCount = scarfCount - 1;
                 //play audio
+                audioSource.clip = collectedItem;
                 audioSource.Play();
+                scarfCount = scarfCount - 1;
             }
         }
         else if (other.gameObject.CompareTag("Hat"))
         {
             if (hatCount > 0)
             {
-                hatCount = hatCount - 1;
                 //play audio
+                audioSource.clip = collectedItem;
                 audioSource.Play();
+                hatCount = hatCount - 1;
             }
         }
         else if (other.gameObject.CompareTag("Nose"))
         {
             if (noseCount > 0)
             {
-                noseCount = noseCount - 1;
                 //play audio
+                audioSource.clip = collectedItem;
                 audioSource.Play();
+                noseCount = noseCount - 1;
             }
         }
         else if (other.gameObject.CompareTag("Button"))
@@ -75,6 +83,7 @@ public class CollectionSound : MonoBehaviour
             if (buttonsCount > 0)
             {
                 //play audio
+                audioSource.clip = collectedItem;
                 audioSource.Play();
                 buttonsCount = buttonsCount - 1;
             }

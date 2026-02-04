@@ -28,7 +28,7 @@ public class GroundImpact : MonoBehaviour
 
             //play audio when the icicle hits the ground 
             audioSource.clip = icicleImpact;
-            audioSource.Play();
+            audioSource.Play(); //COMMENT THIS OUT TO REMOVE FALLING ICICLE SOUNDS 
         }
         
         

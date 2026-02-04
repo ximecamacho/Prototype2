@@ -36,7 +36,7 @@ public class PlayerScript : MonoBehaviour
     public int hatCount = 1;
     public int noseCount = 1;
 
-    public int scarfCount = 2;
+    public int scarfCount = 1;
     public int armsCount = 2;
     public int buttonsCount = 4;
 
@@ -54,7 +54,7 @@ public class PlayerScript : MonoBehaviour
         Time.timeScale = 1f;
         hatCount = 1;
         noseCount = 1;
-        scarfCount = 2;
+        scarfCount = 1;
         armsCount = 2;
         buttonsCount = 4;
         SetScoreText();
@@ -117,11 +117,6 @@ public class PlayerScript : MonoBehaviour
             do_I_Start = true;
             loseTextObject.SetActive(true);
             
-            
-            
-         
-
-
 
         }
         else if (other.gameObject.CompareTag("Arms"))
